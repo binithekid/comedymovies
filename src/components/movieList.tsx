@@ -11,6 +11,9 @@ import TextField from "@mui/material/TextField";
 //CSS
 import "../App.css";
 
+//Netlify ENV
+<pre>{JSON.stringify(process.env, undefined, 2)}</pre>;
+
 const MovieList = () => {
   //Populate Movie List
   const [movieList, setMoveList] = useState<Props[]>([]);
