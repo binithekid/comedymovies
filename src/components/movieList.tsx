@@ -25,7 +25,8 @@ const MovieList = () => {
       `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&with_genres=35`
     )
       .then((response) => response.json())
-      .then((data) => setMoveList(data.results));
+      .then((data) => setMoveList(data.results))
+      .catch((error) => console.log(error));
   }, []);
 
   //Function for range slider - rating
